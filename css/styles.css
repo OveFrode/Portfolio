@@ -1,8 +1,8 @@
 /* Custom Styles for Portfolio */
 
 /* Make each section fill the viewport height */
-header, section {
-    min-height: 100vh;
+.full-height-section {
+    height: 100vh;
 }
 
 .text-purple {
