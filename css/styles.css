@@ -1,5 +1,10 @@
 /* Custom Styles for Portfolio */
 
+/* Make each section fill the viewport height */
+header, section {
+    min-height: 100vh;
+}
+
 .text-purple {
     color: #9b59b6;
 }
@@ -10,6 +15,7 @@
 
 body, html {
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Custom Button Styles */
@@ -21,4 +27,28 @@ body, html {
 .btn-primary:hover {
     background-color: #8e44ad;
     border-color: #8e44ad;
+}
+
+/* navbar for a centered look */
+.navbar {
+    margin-top: 20px;
+    border-top: 3px solid #9b59b6;
+    border-bottom: 3px solid #9b59b6;
+}
+
+/* Custom Styles for List Group in Skills Section */
+.list-group-item {
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+    border: 1px solid #9b59b6;
+}
+
+.list-group-item:hover {
+    background-color: #9b59b6;
+    color: #121212;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 3px solid #9b59b6;
 }
