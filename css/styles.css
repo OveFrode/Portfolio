@@ -9,7 +9,8 @@
 /* Make each section fill the viewport height */
 .full-height-section {
     height: 100vh;
-    background: linear-gradient(to bottom, #9b59b6, #121212, #121212, #9b59b6);
+    background: linear-gradient(to bottom, #121212, #9b59b6);
+    color: #121212;
 }
 
 .text-purple {
