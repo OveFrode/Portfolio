@@ -1,8 +1,20 @@
 /* Custom Styles for Portfolio */
 
+/* Ensure navbar is always at the top */
+.navbar {
+    background-color: #121212 !important;
+    border-bottom: 2px solid #9b59b6;
+}
+
 /* Make each section fill the viewport height */
 .full-height-section {
     height: 100vh;
+    background: linear-gradient(to bottom, #9b59b6, #121212);
+    color: #f0f0f0;
+}
+
+header {
+    background: black; /* Solid black for the header */
 }
 
 .text-purple {
@@ -29,14 +41,7 @@ body, html {
     border-color: #8e44ad;
 }
 
-/* navbar for a centered look */
-.navbar {
-    margin-top: 20px;
-    border-top: 3px solid #9b59b6;
-    border-bottom: 3px solid #9b59b6;
-}
-
-/* Custom Styles for List Group in Skills Section */
+/* list group items for skills */
 .list-group-item {
     background-color: #1b1b1b;
     color: #f0f0f0;
@@ -50,5 +55,6 @@ body, html {
 
 /* Footer Styling */
 footer {
-    border-top: 3px solid #9b59b6;
+    background-color: #121212;
+    border-top: 2px solid #9b59b6;
 }
