@@ -37,7 +37,9 @@
     <section id="about" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
         <div class="container">
             <h2 class="display-4 text-purple">About Me</h2>
-            <p class="lead text-white">Hello! I’m Zac, a final-year student with 5 years of Unity experience and a passion for game development and design. Welcome to my portfolio!</p>
+            <p class="lead text-white">
+                I am an aspiring ICT professional focusing on software development, web and mobile app development, and game design. I am eager to leverage my broad skill set, strong work ethic, and creative capabilities to contribute to innovative projects and drive technological advancements within a dynamic organization.
+            </p>
         </div>
     </section>
 
@@ -45,46 +47,104 @@
         <div class="container">
             <h2 class="display-4 text-purple">Projects</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card mb-4 shadow-sm bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title text-purple">Project 1</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title text-purple">Fast Rescue Boat (FRB) Partial Mission Simulator</h5>
+                            <p class="card-text">
+                                I am currently working on a year-long project with the Australian Maritime College (AMC) that focuses on simulating mission scenarios for fast rescue boats.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card mb-4 shadow-sm bg-dark text-white">
                         <div class="card-body">
-                            <h5 class="card-title text-purple">Project 2</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title text-purple">Significant Coursework Projects</h5>
+                            <p class="card-text">
+                                Developed multiple Unity games, websites, and mobile applications. Managed databases and worked with AI models. Designed and implemented web and mobile applications with secure back-end systems.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="skills" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
         <div class="container">
             <h2 class="display-4 text-purple">Skills</h2>
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item flex-fill bg-dark text-white">Unity</li>
-                <li class="list-group-item flex-fill bg-dark text-white">UI/UX Design</li>
-                <li class="list-group-item flex-fill bg-dark text-white">Python, C#, C++, Java</li>
-                <li class="list-group-item flex-fill bg-dark text-white">Game Development</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="text-white">Technical Skills:</h4>
+                    <ul class="list-group bg-dark text-white">
+                        <li class="list-group-item">Java</li>
+                        <li class="list-group-item">Python</li>
+                        <li class="list-group-item">C</li>
+                        <li class="list-group-item">C#</li>
+                        <li class="list-group-item">JavaScript</li>
+                        <li class="list-group-item">SQL</li>
+                        <li class="list-group-item">HTML/CSS</li>
+                        <li class="list-group-item">PHP</li>
+                        <li class="list-group-item">Swift</li>
+                        <li class="list-group-item">Kotlin</li>
+                        <li class="list-group-item">Git/GitHub</li>
+                        <li class="list-group-item">Visual Studio Code</li>
+                        <li class="list-group-item">Android Studio</li>
+                        <li class="list-group-item">Firebase</li>
+                        <li class="list-group-item">MySQL</li>
+                        <li class="list-group-item">Google Cloud Platform</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-white">Areas of Expertise:</h4>
+                    <ul class="list-group bg-dark text-white">
+                        <li class="list-group-item">Databases</li>
+                        <li class="list-group-item">Networking</li>
+                        <li class="list-group-item">Web Development</li>
+                        <li class="list-group-item">Mobile App Development</li>
+                        <li class="list-group-item">Artificial Intelligence</li>
+                        <li class="list-group-item">Unity</li>
+                    </ul>
+                    <h4 class="text-white mt-3">Soft Skills:</h4>
+                    <ul class="list-group bg-dark text-white">
+                        <li class="list-group-item">Time Management</li>
+                        <li class="list-group-item">Teamwork</li>
+                        <li class="list-group-item">Work Ethic</li>
+                        <li class="list-group-item">Organizational Skills</li>
+                        <li class="list-group-item">Creativity</li>
+                        <li class="list-group-item">Attention to Detail</li>
+                        <li class="list-group-item">Critical Thinking</li>
+                        <li class="list-group-item">Problem-solving</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+    
 
     <section id="contact" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
         <div class="container">
             <h2 class="display-4 text-purple">Contact Me</h2>
-            <p class="lead text-white">Feel free to reach out to me at: <a href="mailto:zacjpartridge@gmail.com" class="text-purple">zacjpartridge@gmail.com</a></p>
+            <form id="contactForm" class="w-50" method="POST" action="contact.php">
+                <div class="mb-3">
+                    <label for="name" class="form-label text-white">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label text-white">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </section>
+    
 
     <footer class="text-light text-center py-3">
         <div class="container">
