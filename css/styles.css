@@ -161,7 +161,7 @@ footer {
 
 /* About Me Section */
 #about {
-    padding: 80px 100px;
+    padding: 80px 100px !important;
     background-color: #1a1a1a;
     color: #fff;
     display: flex;
