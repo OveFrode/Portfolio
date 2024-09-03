@@ -180,6 +180,7 @@ footer {
 
 .about-text {
     flex: 1;
+    margin-left: 60px; /* Adjust this to move text away from the left */
 }
 
 .about-text h2 {
