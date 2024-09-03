@@ -176,11 +176,11 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     gap: 40px;
+    padding-left: 100px; /* Adding padding to the whole container */
 }
 
 .about-text {
     flex: 1;
-    margin-left: 60px; /* Adjust this to move text away from the left */
 }
 
 .about-text h2 {
