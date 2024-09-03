@@ -158,3 +158,69 @@ footer {
     background-color: #222;
     color: #fff;
 }
+
+/* About Me Section */
+#about {
+    padding: 80px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: #800080;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-buttons {
+    margin-top: 20px;
+}
+
+.about-buttons .btn {
+    text-decoration: none;
+    background-color: #800080;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.about-buttons .btn:hover {
+    background-color: #aa00aa;
+}
+
+.about-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+}
