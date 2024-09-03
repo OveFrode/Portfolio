@@ -368,16 +368,26 @@ footer {
     transform: translateY(-10px);
 }
 
-/* Contact Form Styles */
+/* Contact Section Styles */
 #contact {
     padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #1a1a1a; /* Match the background color of other sections */
+    background-color: #1a1a1a; /* Match background with other sections */
 }
 
+/* Contact Form Container */
+.contact-container {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Constrain width of the entire form box */
+    width: 100%;
+}
+
+/* Contact Form Heading */
 #contact h2 {
     font-size: 2.5em;
     color: #800080;
@@ -385,24 +395,20 @@ footer {
     text-align: center;
 }
 
+/* Contact Form Styles */
 #contact form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 500px; /* Set maximum width of the form */
-    width: 100%; /* Make the form responsive */
-    background-color: #222; /* Add background color for the boxed look */
-    padding: 40px; /* Add padding inside the form to make it look like a box */
-    border-radius: 10px; /* Round the corners of the box */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+    width: 100%;
 }
 
 #contact label {
     margin-bottom: 10px;
     font-size: 1.2em;
     width: 100%;
-    text-align: left;
     color: #fff;
+    text-align: left; /* Ensure labels are aligned to the left */
 }
 
 #contact input,
@@ -411,10 +417,10 @@ footer {
     padding: 10px;
     border: 1px solid #800080;
     border-radius: 5px;
-    background-color: #222;
+    background-color: #333;
     color: #fff;
     font-size: 1em;
-    width: 100%; /* Make the input fields stretch across the form */
+    width: 100%; /* Input fields take up full width of the form */
 }
 
 #contact button {
