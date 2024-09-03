@@ -244,7 +244,7 @@ footer {
     background-color: #333;
     border: none;
     color: #fff;
-    padding: 10px 100px;
+    padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1em;
@@ -261,16 +261,17 @@ footer {
 .skills-bars {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between; /* Adjust alignment */
+    gap: 20px;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto;
 }
 
 .skill-bar {
     background-color: #333;
     border-radius: 5px;
     padding: 15px;
-    width: 100%;
-    max-width: 300px;
+    width: 45%; /* Adjust width based on available space */
 }
 
 .skill-bar h3 {
