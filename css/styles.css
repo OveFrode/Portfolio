@@ -8,7 +8,7 @@
 
 /* Make each section fill the viewport height */
 .full-height-section {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(
         to bottom, 
         #9b59b6 10%,      /* Start with purple */
@@ -17,6 +17,7 @@
         #9b59b6 90%       /* Transition back to purple */
     );
     color: #f0f0f0;
+    padding-top: 20px;
 }
 
 .text-purple {
@@ -48,11 +49,16 @@ body, html {
     background-color: #1b1b1b;
     color: #f0f0f0;
     border: 1px solid #9b59b6;
+    margin-bottom: 5px;
 }
 
 .list-group-item:hover {
     background-color: #9b59b6;
     color: #121212;
+}
+
+h2.display-4, h4.text-white {
+    margin-bottom: 20px;
 }
 
 /* Footer Styling */
