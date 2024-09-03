@@ -1,199 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zachary Partridge - Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Zachary Partridge Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sidebar for Contact Links -->
-    <div class="sidebar">
-        <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/your-profile/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <!-- Header Section -->
-    <header class="d-flex flex-column justify-content-center align-items-center text-center full-height-section" style="background: url('path/to/your/hero-image.jpg') center/cover no-repeat;">
-        <div class="container">
-            <h1 class="display-1 text-purple">Zachary Partridge</h1>
-            <p class="lead text-white">Final-year student majoring in Games and Creative Technology</p>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Zachary Partridge</h1>
+        <p>UI/UX Designer & Motion Designer</p>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
-        <div class="container">
-            <h2 class="display-4 text-purple">About Me</h2>
-            <p class="lead text-white">
-                I am an aspiring ICT professional focusing on software development, web and mobile app development, and game design. I am eager to leverage my broad skill set, strong work ethic, and creative capabilities to contribute to innovative projects and drive technological advancements within a dynamic organization.
-            </p>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate UI/UX Designer with expertise in creating intuitive and visually appealing interfaces. I also have a strong interest in motion design, bringing concepts to life through animation.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
-        <div class="container">
-            <h2 class="display-4 text-purple">Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4 shadow-sm bg-dark text-white">
-                        <div class="card-body">
-                            <h5 class="card-title text-purple">Fast Rescue Boat (FRB) Partial Mission Simulator</h5>
-                            <p class="card-text">
-                                I am currently working on a year-long project with the Australian Maritime College (AMC) that focuses on simulating mission scenarios for fast rescue boats.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4 shadow-sm bg-dark text-white">
-                        <div class="card-body">
-                            <h5 class="card-title text-purple">Significant Coursework Projects</h5>
-                            <p class="card-text">
-                                Developed multiple Unity games, websites, and mobile applications. Managed databases and worked with AI models. Designed and implemented web and mobile applications with secure back-end systems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Add your project details here -->
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
-        <div class="container">
-            <h2 class="display-4 text-purple">Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 class="text-white">Technical Skills:</h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="list-group bg-dark text-white">
-                                <li class="list-group-item">Java</li>
-                                <li class="list-group-item">Python</li>
-                                <li class="list-group-item">C</li>
-                                <li class="list-group-item">C#</li>
-                                <li class="list-group-item">JavaScript</li>
-                                <li class="list-group-item">SQL</li>
-                                <li class="list-group-item">HTML/CSS</li>
-                                <li class="list-group-item">PHP</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-group bg-dark text-white">
-                                <li class="list-group-item">Swift</li>
-                                <li class="list-group-item">Kotlin</li>
-                                <li class="list-group-item">Git/GitHub</li>
-                                <li class="list-group-item">Visual Studio Code</li>
-                                <li class="list-group-item">Android Studio</li>
-                                <li class="list-group-item">Firebase</li>
-                                <li class="list-group-item">MySQL</li>
-                                <li class="list-group-item">Google Cloud Platform</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="text-white">Areas of Expertise:</h4>
-                    <ul class="list-group bg-dark text-white">
-                        <li class="list-group-item">Databases</li>
-                        <li class="list-group-item">Networking</li>
-                        <li class="list-group-item">Web Development</li>
-                        <li class="list-group-item">Mobile App Development</li>
-                        <li class="list-group-item">Artificial Intelligence</li>
-                        <li class="list-group-item">Unity</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="text-white">Soft Skills:</h4>
-                    <ul class="list-group bg-dark text-white">
-                        <li class="list-group-item">Time Management</li>
-                        <li class="list-group-item">Teamwork</li>
-                        <li class="list-group-item">Work Ethic</li>
-                        <li class="list-group-item">Organizational Skills</li>
-                        <li class="list-group-item">Creativity</li>
-                        <li class="list-group-item">Attention to Detail</li>
-                        <li class="list-group-item">Critical Thinking</li>
-                        <li class="list-group-item">Problem-solving</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>UI/UX Design</li>
+            <li>Motion Design</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Unity Development</li>
+        </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="d-flex flex-column justify-content-center align-items-center text-center full-height-section">
-        <div class="container">
-            <h2 class="display-4 text-purple">Contact Me</h2>
-            <form id="contactForm" class="w-100 mx-auto" style="max-width: 600px;" method="POST" action="contact.php">
-                <div class="mb-3">
-                    <label for="name" class="form-label text-white">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label text-white">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label text-white">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: zacjpartridge@gmail.com</p>
+        <p>Phone: 048 116 0060</p>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-light text-center py-3">
-        <div class="container">
-            <p>© 2024 Zachary Partridge - All Rights Reserved</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
     </footer>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        let lastScrollTop = 0;
-        window.addEventListener("scroll", function() {
-            let navbar = document.getElementById("navbar");
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = "-80px"; // Adjust height as needed
-            } else {
-                navbar.style.top = "0";
-            }
-            lastScrollTop = scrollTop;
-        });
-    </script>
 </body>
-
 </html>
