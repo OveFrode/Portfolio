@@ -59,3 +59,32 @@ footer {
     background-color: #121212;
     border-top: 2px solid #9b59b6;
 }
+
+#contactForm {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 20px; /* Adjusts spacing from the top of the container */
+}
+
+.form-label {
+    color: #f0f0f0;
+}
+
+.form-control {
+    background-color: #1b1b1b;
+    border: 1px solid #9b59b6;
+    color: #f0f0f0;
+}
+
+.btn-primary {
+    background-color: #9b59b6;
+    border-color: #9b59b6;
+}
+
+.btn-primary:hover {
+    background-color: #8e44ad;
+    border-color: #8e44ad;
+}
+
