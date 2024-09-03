@@ -225,3 +225,83 @@ footer {
     height: auto;
     border-radius: 10px;
 }
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.skills-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skills-header button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #800080;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skills-header button.active {
+    background-color: #800080;
+}
+
+.skills-header button:hover {
+    background-color: #800080;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-box .skill-name {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.skill-box .skill-percentage {
+    font-size: 1.2em;
+    color: #800080;
+    font-weight: bold;
+}
+
+.skill-box .skill-bar {
+    width: 100%;
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skill-box .skill-bar .skill-level {
+    height: 100%;
+    background-color: #800080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    border-radius: 5px;
+}
