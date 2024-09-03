@@ -118,5 +118,30 @@
     <footer>
         <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
     </footer>
+
+     <!-- JavaScript for filtering projects -->
+     <script>
+        document.querySelectorAll('.projects-categories button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.projects-categories button').forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Get the category to filter by
+                const category = button.getAttribute('data-category');
+
+                // Show/Hide projects based on the category
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (card.getAttribute('data-category') === category || category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
