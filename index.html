@@ -49,28 +49,31 @@
         </div>
     </section>
     <section id="skills">
-        <div class="skills-header">
-            <button class="active">Web</button>
-            <button>Others</button>
-            <button>Programming</button>
-            <button>Tools</button>
-        </div>
-        <div class="skills-container">
-            <div class="skill-box">
-                <div class="skill-name">React</div>
-                <div class="skill-percentage">90%</div>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
+        <div id="skills" class="skills-container">
+            <div class="skills-categories">
+                <button class="active">Web</button>
+                <button>Others</button>
+                <button>Programming</button>
+                <button>Tools</button>
             </div>
-            <div class="skill-box">
-                <div class="skill-name">Next.js</div>
-                <div class="skill-percentage">75%</div>
+        
+            <div class="skills-bars">
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 75%;"></div>
+                    <h3>React</h3>
+                    <div class="bar">
+                        <div class="bar-fill" style="width: 90%;"></div>
+                    </div>
                 </div>
+        
+                <div class="skill-bar">
+                    <h3>Next.JS</h3>
+                    <div class="bar">
+                        <div class="bar-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+        
+                <!-- Repeat skill-bar divs for each skill -->
             </div>
-            <!-- Add more skill boxes as needed -->
         </div>
     </section>
     <section id="projects">
