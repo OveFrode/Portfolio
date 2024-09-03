@@ -77,14 +77,26 @@
         </div>
     </section>
     
-    <section id="projects">
+    <<section id="projects">
         <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Project description...</p>
-            <a href="#">View Project</a>
+        <div class="projects-categories">
+            <button class="active" data-category="current">Current</button>
+            <button data-category="personal">Personal</button>
+            <button data-category="academic">Academic</button>
+        </div>
+    
+        <div class="projects-list">
+            <!-- Example Project Card -->
+            <div class="project-card" data-category="current">
+                <h3>Project Title</h3>
+                <p>Short description of the project...</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+    
+            <!-- Repeat for other projects, changing the data-category attribute -->
         </div>
     </section>
+    
 
 
     <section id="contact">
