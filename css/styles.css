@@ -295,9 +295,20 @@ footer {
 
 /* Projects Section */
 #projects {
-    padding: 80px 20px;
-    background-color: #1a1a1a;
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Optional: Background color */
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    color: #800080;
+    margin-bottom: 40px; /* Space below the title */
+    text-align: center;
 }
 
 .projects-categories {
