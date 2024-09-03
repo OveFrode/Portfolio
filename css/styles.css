@@ -1,3 +1,4 @@
+/* Reset and General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,6 +6,7 @@ body {
     color: #fff;
 }
 
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +18,7 @@ header {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #800080; /* Purple color for the logo */
+    color: #800080;
 }
 
 nav ul {
@@ -35,12 +37,25 @@ nav ul li a {
     color: #fff;
     font-size: 1em;
     transition: color 0.3s ease;
+    padding: 10px 20px;
 }
 
 nav ul li a:hover {
-    color: #800080; /* Purple color on hover */
+    color: #800080;
 }
 
+nav ul li.resume-button a {
+    background-color: #800080;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li.resume-button a:hover {
+    background-color: #aa00aa;
+}
+
+/* Hero Section Styles */
 #hero {
     text-align: center;
     padding: 100px 20px;
@@ -49,7 +64,7 @@ nav ul li a:hover {
 
 #hero h1 {
     font-size: 2.5em;
-    color: #800080; /* Purple color for the main heading */
+    color: #800080;
 }
 
 #hero p {
@@ -59,7 +74,7 @@ nav ul li a:hover {
 
 #hero .btn {
     text-decoration: none;
-    background-color: #800080; /* Purple color for buttons */
+    background-color: #800080;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -67,19 +82,41 @@ nav ul li a:hover {
 }
 
 #hero .btn:hover {
-    background-color: #aa00aa; /* Slightly lighter purple on hover */
+    background-color: #aa00aa;
 }
 
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 30px;
+    margin: 15px 0;
+}
+
+.sidebar img:hover {
+    filter: brightness(1.2);
+}
+
+/* Sections (About, Projects, Contact) */
 #about, #projects, #contact {
     padding: 60px 20px;
 }
 
 h2 {
     font-size: 2em;
-    color: #800080; /* Purple color for section headings */
+    color: #800080;
     margin-bottom: 20px;
 }
 
+/* Contact Form Styles */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -93,7 +130,7 @@ h2 {
 #contact input, #contact textarea {
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #800080; /* Purple border for inputs */
+    border: 1px solid #800080;
     border-radius: 5px;
     background-color: #222;
     color: #fff;
@@ -102,7 +139,7 @@ h2 {
 
 #contact button {
     padding: 10px;
-    background-color: #800080; /* Purple color for contact button */
+    background-color: #800080;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -111,9 +148,10 @@ h2 {
 }
 
 #contact button:hover {
-    background-color: #aa00aa; /* Slightly lighter purple on hover */
+    background-color: #aa00aa;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
