@@ -264,6 +264,7 @@ nav ul li.resume-button a:hover {
 }
 
 
+
 /* Ensure skill bars look great across different screens */
 @media (max-width: 768px) {
     .skill-bar {
