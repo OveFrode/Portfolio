@@ -36,31 +36,29 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 1em;
-    padding: 10px 20px;
     transition: color 0.3s ease;
-    border: 2px solid transparent;
+    padding: 10px 20px;
+    border: 2px solid #800080;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
     color: #800080;
-    border-color: #800080; /* Outline on hover */
 }
 
-/* Resume button in header */
 nav ul li.resume-button a {
-    color: #800080;
+    background-color: transparent;
+    color: #fff;
     border: 2px solid #800080;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li.resume-button a:hover {
-    background-color: transparent;
-    color: #aa00aa;
-    border-color: #aa00aa;
+    background-color: #800080;
+    color: #fff;
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 #hero {
     text-align: center;
     padding: 100px 20px;
@@ -79,20 +77,20 @@ nav ul li.resume-button a:hover {
 
 #hero .btn {
     text-decoration: none;
-    color: #800080;
+    background-color: transparent;
+    color: #fff;
     padding: 10px 20px;
     border: 2px solid #800080;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #hero .btn:hover {
-    background-color: transparent;
-    color: #aa00aa;
-    border-color: #aa00aa;
+    background-color: #800080;
+    color: #fff;
 }
 
-/* Sidebar */
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 50%;
@@ -110,6 +108,61 @@ nav ul li.resume-button a:hover {
 
 .sidebar img:hover {
     filter: brightness(1.2);
+}
+
+/* Sections (About, Projects, Contact) */
+#about, #projects, #contact {
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #800080;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styles */
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #800080;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1em;
+}
+
+#contact button {
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #800080;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #800080;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
 }
 
 /* About Me Section */
@@ -153,18 +206,13 @@ nav ul li.resume-button a:hover {
 
 #about .btn {
     text-decoration: none;
-    color: #800080;
+    background-color: transparent;
+    color: #fff;
     padding: 10px 20px;
     border: 2px solid #800080;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
     margin-right: 10px;
-}
-
-#about .btn:hover {
-    background-color: transparent;
-    color: #aa00aa;
-    border-color: #aa00aa;
 }
 
 .about-photo {
@@ -180,7 +228,7 @@ nav ul li.resume-button a:hover {
     border-radius: 10px;
 }
 
-/* Skills Section */
+/* Skills Section Styles */
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -203,22 +251,21 @@ nav ul li.resume-button a:hover {
 }
 
 .skills-categories button {
-    background-color: #333;
+    background-color: transparent;
+    border: 2px solid #800080;
     color: #fff;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    border: 2px solid transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .skills-categories button:hover,
 .skills-categories button.active {
-    background-color: transparent;
-    color: #800080;
-    border-color: #800080;
+    background-color: #800080;
+    color: #fff;
 }
 
 .skills-bars {
@@ -235,6 +282,7 @@ nav ul li.resume-button a:hover {
     border-radius: 5px;
     padding: 15px;
     width: 45%;
+    position: relative;
 }
 
 .skill-bar h3 {
@@ -248,12 +296,22 @@ nav ul li.resume-button a:hover {
     background-color: #555;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
 }
 
 .skill-bar .bar-fill {
     height: 100%;
     background-color: #800080;
     width: 90%;
+    position: relative;
+}
+
+.skill-bar .skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
 }
 
 /* Projects Section */
@@ -271,6 +329,7 @@ nav ul li.resume-button a:hover {
     font-size: 2.5em;
     color: #800080;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .projects-categories {
@@ -280,22 +339,21 @@ nav ul li.resume-button a:hover {
 }
 
 .projects-categories button {
-    background-color: #333;
+    background-color: transparent;
+    border: 2px solid #800080;
     color: #fff;
     padding: 10px 100px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    border: 2px solid transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .projects-categories button:hover,
 .projects-categories button.active {
-    background-color: transparent;
-    color: #800080;
-    border-color: #800080;
+    background-color: #800080;
+    color: #fff;
 }
 
 .projects-list {
@@ -327,24 +385,24 @@ nav ul li.resume-button a:hover {
 
 .project-card .btn {
     text-decoration: none;
-    color: #800080;
+    background-color: transparent;
+    color: #fff;
     padding: 10px 20px;
     border: 2px solid #800080;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .project-card .btn:hover {
-    background-color: transparent;
-    color: #aa00aa;
-    border-color: #aa00aa;
+    background-color: #800080;
+    color: #fff;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
 }
 
-/* Contact Section */
+/* Contact Section Styles */
 #contact {
     padding: 60px 500px;
     display: flex;
@@ -353,6 +411,7 @@ nav ul li.resume-button a:hover {
     background-color: #1a1a1a;
 }
 
+/* Contact Form Container */
 .contact-container {
     background-color: #222;
     padding: 40px;
@@ -362,6 +421,7 @@ nav ul li.resume-button a:hover {
     width: 100%;
 }
 
+/* Contact Form Heading */
 #contact h2 {
     font-size: 2.5em;
     color: #800080;
@@ -369,6 +429,7 @@ nav ul li.resume-button a:hover {
     text-align: center;
 }
 
+/* Contact Form Styles */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -398,20 +459,21 @@ nav ul li.resume-button a:hover {
 
 #contact button {
     padding: 10px;
-    color: #800080;
+    background-color: transparent;
+    color: #fff;
     border: 2px solid #800080;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
     width: 100%;
     max-width: 200px;
 }
 
 #contact button:hover {
-    background-color: transparent;
-    color: #aa00aa;
-    border-color: #aa00aa;
+    background-color: #800080;
+    color: #fff;
 }
+
 
 /* Footer */
 footer {
