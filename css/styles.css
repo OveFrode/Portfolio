@@ -140,7 +140,7 @@ nav ul li.resume-button a:hover {
     gap: 10px;
 }
 
-.about-buttons .btn {
+#about .about-buttons .btn {
     text-decoration: none;
     border: 2px solid #800080;
     color: #800080;
@@ -150,10 +150,11 @@ nav ul li.resume-button a:hover {
     display: inline-block;
 }
 
-.about-buttons .btn:hover {
+#about .about-buttons .btn:hover {
     background-color: #800080;
     color: #fff;
 }
+
 
 .about-photo {
     flex: 1;
