@@ -210,21 +210,12 @@ nav ul li.resume-button a:hover {
     color: #fff;
 }
 
-.skills-bars {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Align left */
-    gap: 20px;
-    max-width: 1000px; /* Adjust to be longer */
-    margin: 0 auto;
-}
-
 .skill-bar {
     background-color: #333;
     border-radius: 5px;
     padding: 15px;
     width: 100%;
-    max-width: 450px; /* Increase width */
+    max-width: 500px; /* Increased width for longer bars */
     position: relative;
 }
 
@@ -248,16 +239,17 @@ nav ul li.resume-button a:hover {
     position: relative;
 }
 
-.skill-bar .bar-fill .skill-percentage {
+.skill-percentage {
     position: absolute;
-    right: 10px;
-    top: -25px;
-    background-color: #800080;
-    padding: 3px 8px;
+    top: 50%;
+    right: 10px; /* Moves the percentage to the right of the bar */
+    transform: translateY(-50%); /* Vertically center the text */
+    font-size: 0.9em;
+    background-color: #800080; /* Purple background for better visibility */
+    padding: 2px 5px;
     border-radius: 5px;
-    color: #fff;
-    font-size: 0.8em;
-    transform: translateY(-50%);
+    color: #fff; /* Make the text white for contrast */
+    z-index: 1; /* Ensure it's above the bar */
 }
 
 
