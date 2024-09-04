@@ -224,7 +224,7 @@ nav ul li.resume-button a:hover {
     border-radius: 5px;
     padding: 15px;
     width: 100%;
-    max-width: 450px; /* Increase width */
+    max-width: 500px; /* Increase width */
     position: relative;
 }
 
@@ -248,16 +248,16 @@ nav ul li.resume-button a:hover {
     position: relative;
 }
 
-.skill-bar .bar-fill .skill-percentage {
+ .skill-percentage {
     position: absolute;
     right: 10px;
-    top: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
     background-color: #800080;
     padding: 3px 8px;
     border-radius: 5px;
     color: #fff;
-    font-size: 0.8em;
-    transform: translateY(-50%);
     z-index: 1; /* Ensure it's above the bar */
 }
 
