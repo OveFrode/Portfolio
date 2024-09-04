@@ -38,20 +38,13 @@ nav ul li a {
     font-size: 1em;
     transition: color 0.3s ease;
     padding: 10px 20px;
-}
-
-nav ul li a:hover {
-    color: #800080;
-}
-
-nav ul li.resume-button a {
     border: 2px solid #800080;
     color: #800080;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li.resume-button a:hover {
+nav ul li a:hover {
     background-color: #800080;
     color: #fff;
 }
@@ -80,6 +73,7 @@ nav ul li.resume-button a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
 }
 
 #hero .btn:hover {
@@ -153,13 +147,13 @@ nav ul li.resume-button a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
 }
 
 .about .btn:hover {
     background-color: #800080;
     color: #fff;
 }
-
 
 /* Skills Section */
 .skills-container {
@@ -395,18 +389,19 @@ nav ul li.resume-button a:hover {
 
 #contact button {
     padding: 10px;
-    background-color: #800080;
-    color: #fff;
-    border: none;
+    background-color: transparent;
+    border: 2px solid #800080;
+    color: #800080;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     width: 100%;
     max-width: 200px;
 }
 
 #contact button:hover {
-    background-color: #aa00aa;
+    background-color: #800080;
+    color: #fff;
 }
 
 /* Footer */
