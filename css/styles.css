@@ -146,7 +146,7 @@ nav ul li.resume-button a:hover {
     border-radius: 10px;
 }
 
-#about .btn {
+.about .btn {
     text-decoration: none;
     border: 2px solid #800080;
     color: #800080;
@@ -155,7 +155,7 @@ nav ul li.resume-button a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#about .btn:hover {
+.about .btn:hover {
     background-color: #800080;
     color: #fff;
 }
