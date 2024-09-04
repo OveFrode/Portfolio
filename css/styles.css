@@ -198,7 +198,7 @@ footer {
     margin-top: 20px;
 }
 
-.about-buttons .btn {
+#about .btn {
     text-decoration: none;
     background-color: #800080;
     color: #fff;
@@ -206,10 +206,6 @@ footer {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-right: 10px;
-}
-
-.about-buttons .btn:hover {
-    background-color: #aa00aa;
 }
 
 .about-photo {
