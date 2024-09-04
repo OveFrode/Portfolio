@@ -171,8 +171,6 @@ nav ul li.resume-button a:hover {
 
 /* Skills Section */
 .skills-container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     background-color: #1a1a1a;
     padding: 80px 20px;
