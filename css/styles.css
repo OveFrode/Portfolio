@@ -38,13 +38,20 @@ nav ul li a {
     font-size: 1em;
     transition: color 0.3s ease;
     padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    color: #800080;
+}
+
+nav ul li.resume-button a {
     border: 2px solid #800080;
     color: #800080;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li.resume-button a:hover {
     background-color: #800080;
     color: #fff;
 }
@@ -73,7 +80,6 @@ nav ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 10px;
 }
 
 #hero .btn:hover {
@@ -127,6 +133,22 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.about .btn {
+    text-decoration: none;
+    border: 2px solid #800080;
+    color: #800080;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.about .btn:hover {
+    background-color: #800080;
+    color: #fff;
+}
+
 .about-photo {
     flex: 1;
     display: flex;
@@ -138,21 +160,6 @@ nav ul li a:hover {
     width: 300px;
     height: auto;
     border-radius: 10px;
-}
-
-.about .btn {
-    text-decoration: none;
-    border: 2px solid #800080;
-    color: #800080;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 10px;
-}
-
-.about .btn:hover {
-    background-color: #800080;
-    color: #fff;
 }
 
 /* Skills Section */
@@ -389,19 +396,18 @@ nav ul li a:hover {
 
 #contact button {
     padding: 10px;
-    background-color: transparent;
-    border: 2px solid #800080;
-    color: #800080;
+    background-color: #800080;
+    color: #fff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
     width: 100%;
     max-width: 200px;
 }
 
 #contact button:hover {
-    background-color: #800080;
-    color: #fff;
+    background-color: #aa00aa;
 }
 
 /* Footer */
