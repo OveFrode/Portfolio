@@ -155,8 +155,6 @@ nav ul li.resume-button a:hover {
     color: #fff !important;
 }
 
-
-
 .about-photo {
     flex: 1;
     display: flex;
@@ -231,6 +229,7 @@ nav ul li.resume-button a:hover {
     width: 100%;
     max-width: 300px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .skill-bar h3 {
@@ -250,16 +249,29 @@ nav ul li.resume-button a:hover {
 .skill-bar .bar-fill {
     height: 100%;
     background-color: #800080;
+    border-radius: 5px; /* Rounded bar */
     position: relative;
 }
 
-.skill-percentage {
+.skill-bar .skill-percentage {
     position: absolute;
-    top: -25px;
+    top: -25px; /* Position the percentage above the bar */
     right: 10px;
-    font-size: 0.9em;
+    background-color: #800080;
     color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px; /* Rounded purple box */
+    font-size: 0.9em;
+    font-weight: bold;
 }
+
+/* Ensure skill bars look great across different screens */
+@media (max-width: 768px) {
+    .skill-bar {
+        max-width: 100%;
+    }
+}
+
 
 /* Projects Section */
 #projects {
