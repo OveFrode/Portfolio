@@ -1,4 +1,4 @@
-/* Reset and General Styles */
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
     color: #fff;
 }
 
-/* Header Styles */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -38,8 +38,6 @@ nav ul li a {
     font-size: 1em;
     transition: color 0.3s ease;
     padding: 10px 20px;
-    border: 2px solid #800080;
-    border-radius: 5px;
 }
 
 nav ul li a:hover {
@@ -47,10 +45,10 @@ nav ul li a:hover {
 }
 
 nav ul li.resume-button a {
-    background-color: transparent;
-    color: #fff;
     border: 2px solid #800080;
-    transition: background-color 0.3s ease;
+    color: #800080;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li.resume-button a:hover {
@@ -58,7 +56,7 @@ nav ul li.resume-button a:hover {
     color: #fff;
 }
 
-/* Hero Section Styles */
+/* Hero */
 #hero {
     text-align: center;
     padding: 100px 20px;
@@ -77,12 +75,11 @@ nav ul li.resume-button a:hover {
 
 #hero .btn {
     text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
     border: 2px solid #800080;
+    color: #800080;
+    padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #hero .btn:hover {
@@ -90,7 +87,7 @@ nav ul li.resume-button a:hover {
     color: #fff;
 }
 
-/* Sidebar Styles */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 50%;
@@ -110,62 +107,7 @@ nav ul li.resume-button a:hover {
     filter: brightness(1.2);
 }
 
-/* Sections (About, Projects, Contact) */
-#about, #projects, #contact {
-    padding: 60px 20px;
-}
-
-h2 {
-    font-size: 2em;
-    color: #800080;
-    margin-bottom: 20px;
-}
-
-/* Contact Form Styles */
-#contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact label {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-#contact input, #contact textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #800080;
-    border-radius: 5px;
-    background-color: #222;
-    color: #fff;
-    font-size: 1em;
-}
-
-#contact button {
-    padding: 10px;
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #800080;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-    background-color: #800080;
-    color: #fff;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-}
-
-/* About Me Section */
+/* About Section */
 #about {
     padding: 80px 100px;
     background-color: #1a1a1a;
@@ -173,15 +115,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 40px;
 }
 
 .about-text {
@@ -200,21 +133,6 @@ footer {
     margin-bottom: 20px;
 }
 
-.about-buttons {
-    margin-top: 20px;
-}
-
-#about .btn {
-    text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    border: 2px solid #800080;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-}
-
 .about-photo {
     flex: 1;
     display: flex;
@@ -228,7 +146,7 @@ footer {
     border-radius: 10px;
 }
 
-/* Skills Section Styles */
+/* Skills Section */
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -253,17 +171,21 @@ footer {
 .skills-categories button {
     background-color: transparent;
     border: 2px solid #800080;
-    color: #fff;
+    color: #800080;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.skills-categories button:hover,
 .skills-categories button.active {
+    background-color: #800080;
+    color: #fff;
+}
+
+.skills-categories button:hover {
     background-color: #800080;
     color: #fff;
 }
@@ -281,7 +203,8 @@ footer {
     background-color: #333;
     border-radius: 5px;
     padding: 15px;
-    width: 45%;
+    width: 100%;
+    max-width: 300px;
     position: relative;
 }
 
@@ -302,15 +225,14 @@ footer {
 .skill-bar .bar-fill {
     height: 100%;
     background-color: #800080;
-    width: 90%;
     position: relative;
 }
 
-.skill-bar .skill-percentage {
+.skill-percentage {
     position: absolute;
+    top: -25px;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 0.9em;
     color: #fff;
 }
 
@@ -329,7 +251,6 @@ footer {
     font-size: 2.5em;
     color: #800080;
     margin-bottom: 40px;
-    text-align: center;
 }
 
 .projects-categories {
@@ -341,17 +262,21 @@ footer {
 .projects-categories button {
     background-color: transparent;
     border: 2px solid #800080;
-    color: #fff;
-    padding: 10px 100px;
+    color: #800080;
+    padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.projects-categories button:hover,
 .projects-categories button.active {
+    background-color: #800080;
+    color: #fff;
+}
+
+.projects-categories button:hover {
     background-color: #800080;
     color: #fff;
 }
@@ -385,12 +310,11 @@ footer {
 
 .project-card .btn {
     text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
     border: 2px solid #800080;
+    color: #800080;
+    padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-card .btn:hover {
@@ -402,16 +326,15 @@ footer {
     transform: translateY(-10px);
 }
 
-/* Contact Section Styles */
+/* Contact Section */
 #contact {
-    padding: 60px 500px;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1a1a1a;
 }
 
-/* Contact Form Container */
 .contact-container {
     background-color: #222;
     padding: 40px;
@@ -421,7 +344,6 @@ footer {
     width: 100%;
 }
 
-/* Contact Form Heading */
 #contact h2 {
     font-size: 2.5em;
     color: #800080;
@@ -429,7 +351,6 @@ footer {
     text-align: center;
 }
 
-/* Contact Form Styles */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -459,9 +380,9 @@ footer {
 
 #contact button {
     padding: 10px;
-    background-color: transparent;
+    background-color: #800080;
     color: #fff;
-    border: 2px solid #800080;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -470,10 +391,8 @@ footer {
 }
 
 #contact button:hover {
-    background-color: #800080;
-    color: #fff;
+    background-color: #aa00aa;
 }
-
 
 /* Footer */
 footer {
