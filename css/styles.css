@@ -213,7 +213,7 @@ nav ul li.resume-button a:hover {
 .skills-bars {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align left */
+    justify-content: center;
     gap: 20px;
     max-width: 1000px; /* Adjust to be longer */
     margin: 0 auto;
