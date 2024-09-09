@@ -326,7 +326,7 @@ nav ul li.resume-button a:hover {
     border-radius: 5px;
     padding: 20px;
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
     text-align: center;
     transition: transform 0.3s ease;
 }
