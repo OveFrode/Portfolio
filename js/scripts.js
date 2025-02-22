@@ -87,6 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
+    // Function to show/hide code snippets when clicked
+    window.toggleCode = function(id) {
+        let codeBlock = document.getElementById(id);
+        if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+            codeBlock.style.display = "block"; // Show code
+        } else {
+            codeBlock.style.display = "none"; // Hide code
+        }
+    };
+
     // Assignment details functions
     window.showAssignment = function(id) {
         const detailsSection = document.getElementById("project-details");
