@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Check if the page has project categories (index.html only)
+    const projectCategoryButtons = document.querySelector('.projects-categories');
+
     // Function to show/hide project cards based on category
     function filterProjects(category) {
         document.querySelectorAll('.project-card').forEach(card => {
@@ -11,31 +14,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Ensure 'Current' is the default category on page load
-    const defaultCategory = 'current';
-    filterProjects(defaultCategory);
+    // If we're on the main project page, set default category to 'Current'
+    if (projectCategoryButtons) {
+        const defaultCategory = 'current';
+        filterProjects(defaultCategory);
 
-    // Set the "Current" button as active
-    document.querySelectorAll('.projects-categories button').forEach(button => {
-        if (button.getAttribute('data-category') === defaultCategory) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
-        }
-    });
-
-    // Project category buttons event listeners
-    document.querySelectorAll('.projects-categories button').forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            document.querySelectorAll('.projects-categories button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Get category and filter projects
-            const category = button.getAttribute('data-category');
-            filterProjects(category);
+        // Set the "Current" button as active
+        document.querySelectorAll('.projects-categories button').forEach(button => {
+            if (button.getAttribute('data-category') === defaultCategory) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
         });
-    });
+
+        // Project category buttons event listeners
+        document.querySelectorAll('.projects-categories button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.projects-categories button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Get category and filter projects
+                const category = button.getAttribute('data-category');
+                filterProjects(category);
+            });
+        });
+    }
 
     // Function to show/hide skill bars based on skill type
     function filterSkills(skillType) {
@@ -64,6 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
             filterSkills(skillType);
         });
     });
+
+    // Ensure Java Projects page cards are always visible
+    if (document.body.classList.contains('java-projects-page')) {
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.display = 'block';
+        });
+    }
 
     // Assignment details functions
     // These functions allow detailed assignment views to be shown/hidden universally.
