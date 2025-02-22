@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     // Check if the page has project categories (index.html only)
     const projectCategoryButtons = document.querySelector('.projects-categories');
 
     // Function to show/hide project cards based on category
     function filterProjects(category) {
         document.querySelectorAll('.project-card').forEach(card => {
-            card.style.display = (category === 'all' || card.getAttribute('data-category') === category) ? 'block' : 'none';
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
         });
     }
 
@@ -16,15 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Set the "Current" button as active
         document.querySelectorAll('.projects-categories button').forEach(button => {
-            button.classList.toggle('active', button.getAttribute('data-category') === defaultCategory);
+            if (button.getAttribute('data-category') === defaultCategory) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
         });
 
         // Project category buttons event listeners
         document.querySelectorAll('.projects-categories button').forEach(button => {
             button.addEventListener('click', () => {
+                // Remove active class from all buttons
                 document.querySelectorAll('.projects-categories button').forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-                filterProjects(button.getAttribute('data-category'));
+
+                // Get category and filter projects
+                const category = button.getAttribute('data-category');
+                filterProjects(category);
             });
         });
     }
@@ -32,7 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to show/hide skill bars based on skill type
     function filterSkills(skillType) {
         document.querySelectorAll('.skills-bars').forEach(skillBar => {
-            skillBar.style.display = (skillBar.getAttribute('data-skill-type') === skillType) ? 'flex' : 'none';
+            if (skillBar.getAttribute('data-skill-type') === skillType) {
+                skillBar.style.display = 'flex';
+            } else {
+                skillBar.style.display = 'none';
+            }
         });
     }
 
@@ -40,18 +57,34 @@ document.addEventListener('DOMContentLoaded', function () {
     filterSkills('programming');
 
     // Skill category buttons event listeners
-    document.querySelectorAll('.skills-categories button').forEach(button => {
+    const skillButtons = document.querySelectorAll('.skills-categories button');
+    skillButtons.forEach(button => {
         button.addEventListener('click', function () {
-            document.querySelectorAll('.skills-categories button').forEach(btn => btn.classList.remove('active'));
+            // Remove active class from all skill buttons
+            skillButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            filterSkills(this.getAttribute('data-skill'));
+
+            // Get skill type and filter skills
+            const skillType = this.getAttribute('data-skill');
+            filterSkills(skillType);
         });
     });
 
+    // Ensure Java Projects page cards are always visible
+    if (document.body.classList.contains('java-projects-page')) {
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.display = 'block';
+        });
+    }
+
     // Function to toggle Quick Preview of code
     window.togglePreview = function(id) {
-        let codeBlock = document.getElementById(id);
-        codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+        var codeBlock = document.getElementById(id);
+        if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+            codeBlock.style.display = "block"; // Show code
+        } else {
+            codeBlock.style.display = "none"; // Hide code
+        }
     };
 
     // Assignment details functions
@@ -70,7 +103,12 @@ document.addEventListener('DOMContentLoaded', function () {
     window.hideAssignment = function() {
         const detailsSection = document.getElementById("project-details");
         if (!detailsSection) return;
+
         detailsSection.style.display = "none";
-        document.getElementById("project-cards")?.style.display = "flex";
+        const projectCards = document.getElementById("project-cards");
+        if (projectCards) projectCards.style.display = "flex";
     };
+
 });
+
+
