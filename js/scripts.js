@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to toggle Quick Preview of code
+    // Function to toggle Quick Preview of code snippets
     window.togglePreview = function(id) {
         var codeBlock = document.getElementById(id);
         if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
@@ -110,5 +110,3 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 });
-
-
