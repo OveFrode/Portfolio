@@ -167,7 +167,6 @@ nav ul li.resume-button a:hover {
     border-radius: 10px;
 }
 
-
 /* Skills Section */
 .skills-container {
     align-items: center;
@@ -215,7 +214,7 @@ nav ul li.resume-button a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1000px; /* Adjust to be longer */
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -227,7 +226,7 @@ nav ul li.resume-button a:hover {
     max-width: 300px;
     position: relative;
     display: flex;
-    justify-content: space-between; /* Aligns skill name and percentage */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -237,7 +236,7 @@ nav ul li.resume-button a:hover {
 }
 
 .skill-bar .bar {
-    width: 80%; /* Adjusted width so that it leaves space for the percentage */
+    width: 80%;
     height: 10px;
     background-color: #555;
     border-radius: 5px;
@@ -255,19 +254,15 @@ nav ul li.resume-button a:hover {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    margin-left: 15px; /* Added margin to give space between the bar and the percentage */
+    margin-left: 15px;
     font-size: 0.9em;
 }
 
-
-
-/* Ensure skill bars look great across different screens */
 @media (max-width: 768px) {
     .skill-bar {
         max-width: 100%;
     }
 }
-
 
 /* Projects Section */
 #projects {
@@ -343,8 +338,8 @@ nav ul li.resume-button a:hover {
 
 .project-card .btn-container {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 10px; /* Add space between buttons */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .project-card .btn {
@@ -354,7 +349,8 @@ nav ul li.resume-button a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%; /* Make buttons take full width */
+    width: 100%;
+    max-width: 250px;
 }
 
 .project-card .btn:hover {
@@ -365,7 +361,6 @@ nav ul li.resume-button a:hover {
 .project-card:hover {
     transform: translateY(-10px);
 }
-
 
 /* Contact Section */
 #contact {
@@ -380,7 +375,7 @@ nav ul li.resume-button a:hover {
     background-color: #222;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     max-width: 600px;
     width: 100%;
 }
@@ -443,36 +438,7 @@ footer {
     color: #fff;
 }
 
-/* Adjust button spacing inside project cards */
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.btn-container a {
-    margin: 10px 0;
-    width: 100%; /* Full width for better button alignment */
-    max-width: 250px;
-}
-
-.project-card a {
-    text-decoration: none;
-    border: 2px solid #800080;
-    color: #800080;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
-}
-
-.project-card a:hover {
-    background-color: #800080;
-    color: #fff;
-}
-
-
-/* General styling for cards in detailed project pages */
+/* Detailed Project Pages */
 #project-details {
     display: flex;
     flex-direction: column;
@@ -486,7 +452,7 @@ footer {
     background-color: #333;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -509,7 +475,7 @@ footer {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%; /* Adjust width for button styling */
+    width: 100%;
     max-width: 200px;
 }
 
@@ -522,7 +488,6 @@ footer {
     transform: translateY(-10px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     #project-details {
         padding: 40px 20px;
