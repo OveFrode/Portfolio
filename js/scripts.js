@@ -11,8 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Ensure only a specific category is visible on page load
-    filterProjects('current'); // Change 'current' to your preferred default category
+    // Ensure 'Current' is the default category on page load
+    const defaultCategory = 'current';
+    filterProjects(defaultCategory);
+
+    // Set the "Current" button as active
+    document.querySelectorAll('.projects-categories button').forEach(button => {
+        if (button.getAttribute('data-category') === defaultCategory) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
 
     // Project category buttons event listeners
     document.querySelectorAll('.projects-categories button').forEach(button => {
