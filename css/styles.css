@@ -572,8 +572,30 @@ footer {
     background-color: #800080;
     color: #fff;
 }
-/* General button styling (ensures all buttons match) */
-.btn {
+/* Code Collapsible Sections */
+.code-container {
+    display: none; /* Hidden by default */
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Expandable Header Styling */
+h3 {
+    cursor: pointer;
+    color: #800080;
+    transition: color 0.3s ease;
+}
+
+h3:hover {
+    color: #aa00aa;
+}
+
+/* Download and Back Button Styling */
+.download-btn, .back-btn {
     display: inline-block;
     text-decoration: none;
     border: 2px solid #800080;
@@ -583,32 +605,18 @@ footer {
     transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;
     font-size: 1em;
+    margin-top: 20px;
 }
 
-/* Hover effect for all buttons */
-.btn:hover {
+.download-btn:hover, .back-btn:hover {
     background-color: #800080;
     color: #fff;
 }
 
-/* Ensure buttons are properly spaced */
+/* Button Container Styling */
 .btn-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-/* Fix for the Download ZIP button */
-.download-btn {
-    font-weight: bold;
-    width: auto; /* Prevents stretching */
-    text-align: center;
-}
-
-/* Ensure Back to Projects button matches */
-.back-btn {
-    width: auto;
-    text-align: center;
-    margin-top: 10px; /* Space between buttons */
 }
