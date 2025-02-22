@@ -77,8 +77,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Function to toggle Quick Preview of code
+    window.togglePreview = function(id) {
+        var codeBlock = document.getElementById(id);
+        if (codeBlock.style.display === "none" || codeBlock.style.display === "") {
+            codeBlock.style.display = "block"; // Show code
+        } else {
+            codeBlock.style.display = "none"; // Hide code
+        }
+    };
+
     // Assignment details functions
-    // These functions allow detailed assignment views to be shown/hidden universally.
     window.showAssignment = function(id) {
         const detailsSection = document.getElementById("project-details");
         if (!detailsSection) return;

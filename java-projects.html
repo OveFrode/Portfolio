@@ -56,31 +56,113 @@
   <!-- Global Assignment Data for Detailed Views -->
   <script>
     window.assignments = {
-      assignment0: {
-        title: "Assignment 0 – Basic Java",
-        content: `
-          <h2>Assignment 0 – Basic Java</h2>
-          <p>This assignment focused on learning fundamental Java programming concepts such as declaring variables, swapping values, reading input from the keyboard, and using arrays.</p>
-          <h3>Key Features</h3>
-          <ul>
-            <li>Variable declaration and swapping ('A' and '$')</li>
-            <li>Input reading from the keyboard</li>
-            <li>Array manipulation and summing of user-entered double values</li>
-          </ul>
-          <h3>Code Snippet</h3>
-          <pre><code>
-// Swap two characters example
-char first = 'A';
-char second = '$';
-char temp = first;
-first = second;
-second = temp;
-          </code></pre>
-          <h3>Reflection</h3>
-          <p>This project helped me solidify my understanding of basic Java syntax and programming logic. I learned the importance of clean code and commenting, which laid the foundation for more complex projects later on.</p>
-          <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
-        `
-      },
+        assignment0: {
+            title: "Assignment 0 – Basic Java",
+            content: `
+                <h2>Assignment 0 – Basic Java</h2>
+                <p>This assignment focused on learning fundamental Java programming concepts such as declaring variables, swapping values, reading input from the keyboard, and using arrays.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Variable declaration and swapping ('A' and '$')</li>
+                    <li>Input reading from the keyboard</li>
+                    <li>Array manipulation and summing of user-entered double values</li>
+                </ul>
+
+                <h3>Code Snippet</h3>
+                <pre><code>
+public class A0Part1 {
+    public static void main(String[] args) {
+        char a = 'A'; // assigning first value
+        char b = '$'; // assigning second value
+        char temp; // assigning temp value
+
+        System.out.println("Before swapping value: a is " + a + " and b is " + b + ".");
+
+        // swapping values
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping value: a is " + a + " and b is " + b + ".");
+    }
+}
+                </code></pre>
+
+                <h3>Task 2 – Display Numbers in Between</h3>
+                <pre><code>
+import java.util.Scanner;
+
+public class A0Part2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x, y, temp;
+
+        System.out.print("Please enter your first number: ");
+        x = sc.nextInt();
+        System.out.print("Please enter your second number: ");
+        y = sc.nextInt();
+
+        // Swap if x is greater than y
+        if (x > y) {
+            temp = x;
+            x = y;
+            y = temp;
+        }
+
+        // Display numbers in between
+        for (int i = x; i <= y; i++) {
+            System.out.print(i + ", ");
+        }
+    }
+}
+                </code></pre>
+
+                <h3>Task 3 – Sum of Up to 10 Numbers</h3>
+                <pre><code>
+import java.util.Scanner;
+
+public class A0Part3 {
+    public static void main(String[] args) {
+        final int LIMIT = 10; // Maximum numbers allowed
+        final double END = -1.0; // Stop signal
+
+        Scanner sc = new Scanner(System.in);
+        double[] numbers = new double[LIMIT]; 
+        double currentNum;
+        int count = 0;
+        double sum = 0.0;
+
+        System.out.print("Please enter a number (-1.0 to Stop): ");
+        currentNum = sc.nextDouble();
+
+        while ((count < LIMIT) && (currentNum != END)) {
+            numbers[count] = currentNum;
+            sum += numbers[count];
+            count++;
+            if (count < LIMIT) {
+                System.out.print("Please enter another number (-1.0 to Stop): ");
+                currentNum = sc.nextDouble();
+            }
+        }
+
+        System.out.println("Sum is: " + sum);
+    }
+}
+                </code></pre>
+
+                <h3>Reflection</h3>
+                <p>This project helped me solidify my understanding of basic Java syntax and programming logic. I learned the importance of clean code and commenting, which laid the foundation for more complex projects later on.</p>
+
+                <div class="btn-container">
+                    <a href="assignments/A0Part1.java" class="btn">Download Part 1</a>
+                    <a href="assignments/A0Part2.java" class="btn">Download Part 2</a>
+                    <a href="assignments/A0Part3.java" class="btn">Download Part 3</a>
+                    <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+                </div>
+            `
+        },
+
       assignment1: {
         title: "Assignment 1 – Chocolate Factory Simulation",
         content: `
