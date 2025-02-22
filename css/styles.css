@@ -572,31 +572,43 @@ footer {
     background-color: #800080;
     color: #fff;
 }
-/* Back Button Styling */
-.back-btn {
+/* General button styling (ensures all buttons match) */
+.btn {
     display: inline-block;
-    width: auto; /* Prevents stretching */
-    padding: 10px 20px; /* Adds proper spacing */
-    text-align: center;
     text-decoration: none;
     border: 2px solid #800080;
     color: #800080;
-    font-size: 1em;
+    padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 20px; /* Adds spacing from content */
+    text-align: center;
+    font-size: 1em;
 }
 
-.back-btn:hover {
+/* Hover effect for all buttons */
+.btn:hover {
     background-color: #800080;
     color: #fff;
 }
-.code-preview {
-    display: none; /* Hidden by default */
-    background-color: #222;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    max-width: 100%;
+
+/* Ensure buttons are properly spaced */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Fix for the Download ZIP button */
+.download-btn {
+    font-weight: bold;
+    width: auto; /* Prevents stretching */
+    text-align: center;
+}
+
+/* Ensure Back to Projects button matches */
+.back-btn {
+    width: auto;
+    text-align: center;
+    margin-top: 10px; /* Space between buttons */
 }
