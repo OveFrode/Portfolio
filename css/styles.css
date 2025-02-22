@@ -536,3 +536,37 @@ footer {
         width: 100%;
     }
 }
+/* Java Projects Page */
+#project-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the cards */
+    justify-content: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between cards */
+    align-items: center; /* Ensures all cards are centered */
+}
+
+/* Make sure project cards are centered properly */
+.project-card {
+    width: 100%;
+    max-width: 600px; /* Limits card width */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card .btn {
+    display: block;
+    margin: 10px auto; /* Centers the "See More" button */
+}
+
