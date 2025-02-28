@@ -176,27 +176,185 @@ public class A0Part3 {
             `
         },
 
-      assignment1: {
-        title: "Assignment 1 – Chocolate Factory Simulation",
-        content: `
-          <h2>Assignment 1 – Chocolate Factory Simulation</h2>
-          <p>In this project, I worked collaboratively to develop a Java program that simulates the process of optimizing chocolate flavour by varying curry and banana piece quantities.</p>
-          <h3>Key Features</h3>
-          <ul>
-            <li>User input validation and range checking</li>
-            <li>Table generation to display simulation results</li>
-            <li>Pair programming methodology to enhance collaboration skills</li>
-          </ul>
-          <h3>Code Snippet</h3>
-          <pre><code>
-// Calculate flavour based on curry concentration and banana pieces
-double bananaFactor = 120 - bananaPieces;
-double flavour = curryConcentration * (800 - (bananaFactor * bananaFactor));
-          </code></pre>
-          <h3>Reflection</h3>
-          <p>This assignment improved my skills in user input handling and table formatting in Java. Working in a pair also taught me valuable lessons in collaborative problem-solving and code style consistency.</p>
-          <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
-        `
+  // Add Assignment 1
+    assignment1: {
+    title: "Assignment 1 – Chocolate Factory Simulation",
+    content: `
+        <h2>Assignment 1 – Chocolate Factory Simulation</h2>
+        <p>
+            This assignment was an introduction to Java object-oriented programming (OOP) concepts, 
+            including interfaces, classes, and user input validation. The goal was to simulate a chocolate factory 
+            optimizing flavor based on curry concentration and banana pieces.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>Object-oriented approach with interfaces and classes</li>
+            <li>User input validation for step size and banana piece range</li>
+            <li>Dynamic table generation for displaying flavor simulation results</li>
+        </ul>
+
+        <!-- Collapsible Sections for Code Snippets -->
+        <h3 class="collapsible" onclick="toggleCode('sweetFAInterface')">SweetFAInterface.java ⮟</h3>
+        <div id="sweetFAInterface" class="code-container" style="display: none;">
+            <pre><code>
+/**
+ * Interface for Sweet Flavour Accents (SweetFA)
+ * Defines ADT methods for calculating and managing flavor concentration.
+ */
+public interface SweetFAInterface {
+    public Curry getConcentration();
+    public int getNumBananaPieces();
+    public void setConcentration(Curry concentration);
+    public void setNumBananaPieces(int n);
+    public void calculateFlavour();
+    public boolean exceedsThreshold();
+    public double toDouble();
+    public String toString();
+}
+            </code></pre>
+        </div>
+
+        <h3 class="collapsible" onclick="toggleCode('sweetFA')">SweetFA.java ⮟</h3>
+        <div id="sweetFA" class="code-container" style="display: none;">
+            <pre><code>
+/**
+ * Implementation of SweetFA
+ * This class calculates the flavor score based on curry concentration and banana pieces.
+ */
+public class SweetFA implements SweetFAInterface {
+    private Curry concentration;
+    private int numBananaPieces;
+    private double flavour;
+
+    public SweetFA(Curry concentration, int numBananaPieces) {
+        this.concentration = concentration;
+        this.numBananaPieces = numBananaPieces;
+        calculateFlavour();
+    }
+
+    public Curry getConcentration() { return concentration; }
+    public int getNumBananaPieces() { return numBananaPieces; }
+
+    public void setConcentration(Curry concentration) {
+        this.concentration = concentration;
+        calculateFlavour();
+    }
+
+    public void setNumBananaPieces(int n) {
+        this.numBananaPieces = n;
+        calculateFlavour();
+    }
+
+    public void calculateFlavour() {
+        double bananaFactor = 120 - numBananaPieces;
+        flavour = concentration.toDouble() * (800 - (bananaFactor * bananaFactor));
+    }
+
+    public boolean exceedsThreshold() {
+        return flavour >= 500;
+    }
+
+    public double toDouble() { return flavour; }
+    public String toString() { return "Flavour Score: " + flavour; }
+}
+            </code></pre>
+        </div>
+
+        <h3 class="collapsible" onclick="toggleCode('curryClass')">Curry.java ⮟</h3>
+        <div id="curryClass" class="code-container" style="display: none;">
+            <pre><code>
+/**
+ * Represents the curry concentration in the chocolate.
+ */
+public class Curry {
+    private double concentration;
+    private final double step;
+
+    public Curry(double step) {
+        this.concentration = 0.0;
+        this.step = step;
+    }
+
+    public double toDouble() { return concentration; }
+    public boolean increaseConcentration() {
+        if (concentration + step >= 1.0) return false;
+        concentration += step;
+        return true;
+    }
+
+    public String toString() { return String.format("%.2f", concentration); }
+}
+            </code></pre>
+        </div>
+
+        <h3 class="collapsible" onclick="toggleCode('mainSimulation')">AssigOne122.java ⮟</h3>
+        <div id="mainSimulation" class="code-container" style="display: none;">
+            <pre><code>
+import java.util.Scanner;
+
+/**
+ * Main class for running the Chocolate Factory Simulation.
+ */
+public class AssigOne122 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int minBanana, maxBanana;
+        double stepSize;
+
+        System.out.print("Enter the minimum number of banana pieces: ");
+        minBanana = sc.nextInt();
+        System.out.print("Enter the maximum number of banana pieces: ");
+        maxBanana = sc.nextInt();
+        System.out.print("Enter the curry concentration step size: ");
+        stepSize = sc.nextDouble();
+
+        // Validate input
+        if (minBanana < 0 || maxBanana < minBanana || (maxBanana - minBanana) > 10) {
+            System.out.println("Invalid input. Please try again.");
+            return;
+        }
+
+        System.out.println("\\nChocolate Flavor Table:");
+        Curry curry = new Curry(stepSize);
+
+        while (curry.increaseConcentration()) {
+            System.out.printf("%-8s", curry.toString());
+            for (int banana = minBanana; banana <= maxBanana; banana++) {
+                SweetFA flavor = new SweetFA(curry, banana);
+                System.out.printf("%8.1f", flavor.toDouble());
+                if (flavor.exceedsThreshold()) break;
+            }
+            System.out.println();
+        }
+    }
+}
+            </code></pre>
+        </div>
+
+        <h3>Reflection</h3>
+        <p>
+            This project was one of my first experiences working with <strong>object-oriented programming (OOP)</strong> in Java. 
+            The design of interfaces and encapsulating logic in classes was a challenge at the time but provided a strong foundation 
+            for future software development. Looking back, some parts of the implementation could be improved:
+        </p>
+
+        <ul>
+            <li><strong>Refactoring for better modularity:</strong> The main simulation logic could have been broken into multiple helper functions.</li>
+            <li><strong>Error handling:</strong> Input validation could have been handled more gracefully instead of immediately terminating the program.</li>
+            <li><strong>Separation of concerns:</strong> The main class handled both user input and computation, which could have been split into separate classes.</li>
+        </ul>
+
+        <p>
+            Despite these limitations, this assignment gave me a strong appreciation for <strong>designing structured and reusable code</strong>, 
+            which I have since refined in later projects.
+        </p>
+
+        <div class="btn-container">
+            <a href="Assignments/KIT107_Assignment_1.zip" class="btn download-btn">Download ZIP</a>
+            <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+        </div>
+    `
       }
     };
   </script>
