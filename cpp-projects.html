@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C/C++/C# Projects - Zac's Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C/C++/C# Projects - Zac's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Z</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="#snippets">Snippets</a></li>
-                <li><a href="#reflections">Reflections</a></li>
-                <li><a href="index.html">Back to Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+                <div class="logo">Z</div>
+                <nav>
+                        <ul>
+                                <li><a href="index.html">Projects</a></li>
+                                <li><a href="#snippets">Snippets</a></li>
+                                <li><a href="#reflections">Reflections</a></li>
+                                <li><a href="index.html">Back to Portfolio</a></li>
+                        </ul>
+                </nav>
+        </header>
 
-  <div class="container">
-    <!-- Project Cards (Blog List) -->
-    <section id="project-cards">
-      <h2>C/C++/C# Projects</h2>
-      <div class="card-list">
-        <!-- Assignment 2 Card -->
-        <div class="project-card" data-assignment="assignment2">
-          <h3>Assignment 2 – Game Scoring System</h3>
-          <p>Implemented a scoring system with linked lists and modular functions.</p>
-          <a href="#" class="btn" onclick="showAssignment('assignment2'); return false;">See More</a>
-        </div>
-         <div class="project-card" data-assignment="assignment3">
-            <h3>Assignment 3 – Maze Solver</h3>
-            <p>Implemented a game tree for solving mazes using BFS and DFS.</p>
-            <a href="#" class="btn" onclick="showAssignment('assignment3'); return false;">See More</a>
-          </div>
-      </div>
+    <div class="container">
+        <!-- Project Cards (Blog List) -->
+        <section id="project-cards">
+            <h2>C/C++/C# Projects</h2>
+            <div class="card-list">
+                <!-- Assignment 2 Card -->
+                <div class="project-card" data-assignment="assignment2">
+                    <h3>Assignment 2 – Game Scoring System</h3>
+                    <p>Implemented a scoring system with linked lists and modular functions.</p>
+                    <a href="#" class="btn" onclick="showAssignment('assignment2'); return false;">See More</a>
+                </div>
+                 <div class="project-card" data-assignment="assignment3">
+                        <h3>Assignment 3 – Maze Solver</h3>
+                        <p>Implemented a game tree for solving mazes using BFS and DFS.</p>
+                        <a href="#" class="btn" onclick="showAssignment('assignment3'); return false;">See More</a>
+                    </div>
+            </div>
 
-    </section>
+        </section>
 
-    <!-- Detailed Assignment Blog Post (Hidden by default) -->
-    <section id="project-details">
-      <!-- Content will be injected by JavaScript -->
-    </section>
-  </div>
-
-  <footer class="container">
-    <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
-  </footer>
-
-  <!-- Link to external JavaScript -->
-  <script src="js/scripts.js"></script>
-  <!-- Global Assignment Data for Detailed Views -->
-  <script>
-    window.assignments = {
-        assignment2: {
-            title: "Assignment 2 – Game Scoring System",
-            content: `
-                <h2>Assignment 2 – Game Scoring System</h2>
-    <p>
-        This assignment required implementing a modular <strong>game scoring system</strong> using <strong>C</strong>. It focused on <strong>linked lists</strong>, <strong>memory management</strong>, and <strong>encapsulation</strong>. The provided codebase contained some functions, but we needed to implement missing parts and ensure proper integration.
-    </p>
-    
-    <h3>Project Overview</h3>
-    <ul>
-        <li>Built a <strong>dynamic linked list</strong> structure for handling scores.</li>
-        <li>Used <strong>getter and setter functions</strong> to maintain encapsulation.</li>
-        <li>Managed <strong>memory allocation</strong> carefully to avoid leaks.</li>
-        <li>Implemented missing logic while ensuring compatibility with the existing code.</li>
-    </ul>
-
-    <h3>Key Code Implementations</h3>
-    
-    <h3 class="collapsible" onclick="toggleCode('quartersC')">quarters.c ⮟</h3>
-    <div id="quartersC" class="code-container" style="display: none;">
-        <pre><code>
-void add_score_to_quarter(quarters q, score a_score) {
-    node new_s;
-    node current;
-    
-    init_node(&new_s, a_score);
-    
-    if (get_scores(q) == NULL) {
-        set_scores(q, new_s);
-    } else {
-        current = get_scores(q);
-        while (get_next(current) != NULL) {
-            current = get_next(current);
-        }
-        set_next(current, new_s);
-    }
-}
-        </code></pre>
+        <!-- Detailed Assignment Blog Post (Hidden by default) -->
+        <section id="project-details">
+            <!-- Content will be injected by JavaScript -->
+        </section>
     </div>
 
-    <h3 class="collapsible" onclick="toggleCode('headersH')">headers.h ⮟</h3>
-    <div id="headersH" class="code-container" style="display: none;">
-        <pre><code>
+    <footer class="container">
+        <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="js/scripts.js"></script>
+    <!-- Global Assignment Data for Detailed Views -->
+    <script>
+        window.assignments = {
+                assignment2: {
+                        title: "Assignment 2 – Game Scoring System",
+                        content: `
+                                <h2>Assignment 2 – Game Scoring System</h2>
+        <p>
+                This assignment required implementing a modular <strong>game scoring system</strong> using <strong>C</strong>. It focused on <strong>linked lists</strong>, <strong>memory management</strong>, and <strong>encapsulation</strong>. The provided codebase contained some functions, but we needed to implement missing parts and ensure proper integration.
+        </p>
+        
+        <h3>Project Overview</h3>
+        <ul>
+                <li>Built a <strong>dynamic linked list</strong> structure for handling scores.</li>
+                <li>Used <strong>getter and setter functions</strong> to maintain encapsulation.</li>
+                <li>Managed <strong>memory allocation</strong> carefully to avoid leaks.</li>
+                <li>Implemented missing logic while ensuring compatibility with the existing code.</li>
+        </ul>
+
+        <h3>Key Code Implementations</h3>
+        
+        <h3 class="collapsible" onclick="toggleCode('quartersC')">quarters.c ⮟</h3>
+        <div id="quartersC" class="code-container" style="display: none;">
+                <pre><code>
+void add_score_to_quarter(quarters q, score a_score) {
+        node new_s;
+        node current;
+        
+        init_node(&new_s, a_score);
+        
+        if (get_scores(q) == NULL) {
+                set_scores(q, new_s);
+        } else {
+                current = get_scores(q);
+                while (get_next(current) != NULL) {
+                        current = get_next(current);
+                }
+                set_next(current, new_s);
+        }
+}
+                </code></pre>
+        </div>
+
+        <h3 class="collapsible" onclick="toggleCode('headersH')">headers.h ⮟</h3>
+        <div id="headersH" class="code-container" style="display: none;">
+                <pre><code>
 #ifndef HEADERS_H
 #define HEADERS_H
 
@@ -110,171 +110,171 @@ node get_next(node n);
 void set_next(node n, node next);
 void set_scores(quarters q, node n);
 node get_scores(quarters q);
-        </code></pre>
-    </div>
-    
-    <h3 class="collapsible" onclick="toggleCode('memoryM')">Memory Management Considerations ⮟</h3>
-    <div id="memoryM" class="code-container" style="display: none;">
-        <pre><code>
+                </code></pre>
+        </div>
+        
+        <h3 class="collapsible" onclick="toggleCode('memoryM')">Memory Management Considerations ⮟</h3>
+        <div id="memoryM" class="code-container" style="display: none;">
+                <pre><code>
 // Example of memory deallocation to avoid leaks
 void free_quarters(quarters q) {
-    node current = get_scores(q);
-    node temp;
-    
-    while (current != NULL) {
-        temp = get_next(current);
-        free(current);
-        current = temp;
-    }
+        node current = get_scores(q);
+        node temp;
+        
+        while (current != NULL) {
+                temp = get_next(current);
+                free(current);
+                current = temp;
+        }
 }
-        </code></pre>
-    </div>
+                </code></pre>
+        </div>
 
-    <h3>Comparison with Teacher’s Solution</h3>
-    <p>
-        While my implementation worked, I noticed some key differences in the <strong>teacher’s solution</strong>:
-    </p>
-    <ul>
-        <li>The teacher <strong>used function pointers</strong> in some parts, making the code more flexible.</li>
-        <li>Encapsulation was handled <strong>more strictly</strong>, preventing direct access to struct members.</li>
-        <li>Their solution <strong>handled edge cases better</strong>, like <strong>empty lists</strong> or <strong>duplicate entries</strong>.</li>
-    </ul>
-    <p>
-        One notable change was in <strong>how nodes were initialized</strong>. In my version, I initialized nodes inline, but in the teacher’s version, a separate <strong>init function</strong> handled everything. This made the code <strong>more modular and reusable</strong>.
-    </p>
+        <h3>Comparison with Teacher’s Solution</h3>
+        <p>
+                While my implementation worked, I noticed some key differences in the <strong>teacher’s solution</strong>:
+        </p>
+        <ul>
+                <li>The teacher <strong>used function pointers</strong> in some parts, making the code more flexible.</li>
+                <li>Encapsulation was handled <strong>more strictly</strong>, preventing direct access to struct members.</li>
+                <li>Their solution <strong>handled edge cases better</strong>, like <strong>empty lists</strong> or <strong>duplicate entries</strong>.</li>
+        </ul>
+        <p>
+                One notable change was in <strong>how nodes were initialized</strong>. In my version, I initialized nodes inline, but in the teacher’s version, a separate <strong>init function</strong> handled everything. This made the code <strong>more modular and reusable</strong>.
+        </p>
 
-    <h3>Reflection</h3>
-    <p>
-        <strong>Debugging in C</strong> was one of the biggest challenges. Unlike higher-level languages, C doesn’t offer built-in debugging tools, so I relied on:
-    </p>
-    <ul>
-        <li><strong>Print debugging</strong> – Checking struct contents at various points.</li>
-        <li><strong>Valgrind</strong> – Used for detecting memory leaks.</li>
-        <li><strong>Stepping through execution</strong> – Analyzing function calls manually.</li>
-    </ul>
-    <p>
-        This assignment reinforced the importance of <strong>modular code</strong>, <strong>proper memory management</strong>, and <strong>following structured debugging practices</strong>. It also helped me appreciate why <strong>C debugging</strong> is notoriously difficult!
-    </p>
+        <h3>Reflection</h3>
+        <p>
+                <strong>Debugging in C</strong> was one of the biggest challenges. Unlike higher-level languages, C doesn’t offer built-in debugging tools, so I relied on:
+        </p>
+        <ul>
+                <li><strong>Print debugging</strong> – Checking struct contents at various points.</li>
+                <li><strong>Valgrind</strong> – Used for detecting memory leaks.</li>
+                <li><strong>Stepping through execution</strong> – Analyzing function calls manually.</li>
+        </ul>
+        <p>
+                This assignment reinforced the importance of <strong>modular code</strong>, <strong>proper memory management</strong>, and <strong>following structured debugging practices</strong>. It also helped me appreciate why <strong>C debugging</strong> is notoriously difficult!
+        </p>
 
-    <div class="btn-container">
-        <a href="Assignments/KIT107_Assignment_2.zip" class="btn download-btn">Download ZIP</a>
-        <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
-    </div>
-            `
-        },
-        assignment3: {
-            title: "Assignment 3 – Maze Solver",
-            content: `
-                <h2>Assignment 3 – Maze Solver</h2>
-    <p>
-        This assignment required implementing a <strong>maze-solving algorithm</strong> using <strong>C</strong>. It focused on <strong>game trees</strong>, <strong>linked lists</strong>, <strong>stacks</strong>, and <strong>queues</strong> to find an optimal path from <strong>start to stop</strong> in a given maze representation.
-    </p>
-    
-    <h3>Project Overview</h3>
-    <ul>
-        <li>Built a **game tree** to explore all possible moves in the maze.</li>
-        <li>Used **stacks and queues** to implement **depth-first** and **breadth-first search**.</li>
-        <li>Created **linked list nodes** to store game states efficiently.</li>
-        <li>Ensured memory safety and proper handling of **dynamic allocations**.</li>
-    </ul>
+        <div class="btn-container">
+                <a href="Assignments/KIT107_Assignment_2.zip" class="btn download-btn">Download ZIP</a>
+                <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+        </div>
+                        `
+                },
+                assignment3: {
+                        title: "Assignment 3 – Maze Solver",
+                        content: `
+                                <h2>Assignment 3 – Maze Solver</h2>
+        <p>
+                This assignment required implementing a <strong>maze-solving algorithm</strong> using <strong>C</strong>. It focused on <strong>game trees</strong>, <strong>linked lists</strong>, <strong>stacks</strong>, and <strong>queues</strong> to find an optimal path from <strong>start to stop</strong> in a given maze representation.
+        </p>
+        
+        <h3>Project Overview</h3>
+        <ul>
+                <li>Built a <strong>game tree</strong> to explore all possible moves in the maze.</li>
+                <li>Used <strong>stacks and queues</strong> to implement <strong>depth-first</strong> and <strong>breadth-first search</strong>.</li>
+                <li>Created <strong>linked list nodes</strong> to store game states efficiently.</li>
+                <li>Ensured memory safety and proper handling of <strong>dynamic allocations</strong>.</li>
+        </ul>
 
-    <h3>Key Code Implementations</h3>
-    
-    <h3 class="collapsible" onclick="toggleCode('gameTreeC')">game_tree.c ⮟</h3>
-    <div id="gameTreeC" class="code-container" style="display: none;">
-        <pre><code>
+        <h3>Key Code Implementations</h3>
+        
+        <h3 class="collapsible" onclick="toggleCode('gameTreeC')">game_tree.c ⮟</h3>
+        <div id="gameTreeC" class="code-container" style="display: none;">
+                <pre><code>
 // Recursive function to generate the game tree
 void expand_game_tree(t_node root) {
-    if (root == NULL) return;
-    // Generate child nodes for possible moves
-    if (can_move_forward(root)) root->children[0] = create_node(FORWARD);
-    if (can_turn_left(root)) root->children[1] = create_node(LEFT);
-    if (can_turn_right(root)) root->children[2] = create_node(RIGHT);
-    // Recursively expand child nodes
-    for (int i = 0; i < 3; i++) {
-        if (root->children[i] != NULL) {
-            expand_game_tree(root->children[i]);
+        if (root == NULL) return;
+        // Generate child nodes for possible moves
+        if (can_move_forward(root)) root->children[0] = create_node(FORWARD);
+        if (can_turn_left(root)) root->children[1] = create_node(LEFT);
+        if (can_turn_right(root)) root->children[2] = create_node(RIGHT);
+        // Recursively expand child nodes
+        for (int i = 0; i < 3; i++) {
+                if (root->children[i] != NULL) {
+                        expand_game_tree(root->children[i]);
+                }
         }
-    }
 }
-        </code></pre>
-    </div>
+                </code></pre>
+        </div>
 
-    <h3 class="collapsible" onclick="toggleCode('stackC')">stack.c ⮟</h3>
-    <div id="stackC" class="code-container" style="display: none;">
-        <pre><code>
+        <h3 class="collapsible" onclick="toggleCode('stackC')">stack.c ⮟</h3>
+        <div id="stackC" class="code-container" style="display: none;">
+                <pre><code>
 // Stack implementation for depth-first search
 void push(stack s, t_node node) {
-    node->next = s->top;
-    s->top = node;
+        node->next = s->top;
+        s->top = node;
 }
 
 // Pop function
 void pop(stack s) {
-    if (s->top != NULL) {
-        t_node temp = s->top;
-        s->top = s->top->next;
-        free(temp);
-    }
+        if (s->top != NULL) {
+                t_node temp = s->top;
+                s->top = s->top->next;
+                free(temp);
+        }
 }
-        </code></pre>
-    </div>
+                </code></pre>
+        </div>
 
-    <h3 class="collapsible" onclick="toggleCode('queueC')">queue.c ⮟</h3>
-    <div id="queueC" class="code-container" style="display: none;">
-        <pre><code>
+        <h3 class="collapsible" onclick="toggleCode('queueC')">queue.c ⮟</h3>
+        <div id="queueC" class="code-container" style="display: none;">
+                <pre><code>
 // Queue implementation for breadth-first search
 void enqueue(queue q, t_node node) {
-    if (q->rear == NULL) {
-        q->front = q->rear = node;
-    } else {
-        q->rear->next = node;
-        q->rear = node;
-    }
+        if (q->rear == NULL) {
+                q->front = q->rear = node;
+        } else {
+                q->rear->next = node;
+                q->rear = node;
+        }
 }
 
 // Dequeue function
 void dequeue(queue q) {
-    if (q->front != NULL) {
-        t_node temp = q->front;
-        q->front = q->front->next;
-        free(temp);
-    }
-}
-        </code></pre>
-    </div>
-    
-    <h3>Comparison with Teacher’s Solution</h3>
-    <p>
-        Comparing my implementation to the **teacher’s solution**, I found key differences:
-    </p>
-    <ul>
-        <li>The teacher’s solution **optimized tree expansion**, pruning redundant paths earlier.</li>
-        <li>Their approach to **memory management was stricter**, reducing potential leaks.</li>
-        <li>They **separated logic into more helper functions**, improving readability.</li>
-    </ul>
-
-    <h3>Reflection</h3>
-    <p>
-        Debugging this project was a challenge due to **segmentation faults and memory leaks**. Here’s what I learned:
-    </p>
-    <ul>
-        <li>**Valgrind** is essential for detecting **memory leaks** in dynamic allocations.</li>
-        <li>Breaking down **recursion into smaller steps** made debugging easier.</li>
-        <li>Using **print statements in tree traversal** helped verify correctness.</li>
-    </ul>
-
-    <p>
-        Overall, this assignment reinforced my understanding of **tree traversal**, **recursive functions**, and **memory management in C**.
-    </p>
-
-    <div class="btn-container">
-        <a href="Assignments/KIT107_Assignment_3.zip" class="btn download-btn">Download ZIP</a>
-        <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
-    </div>
-            `
+        if (q->front != NULL) {
+                t_node temp = q->front;
+                q->front = q->front->next;
+                free(temp);
         }
-    };
-  </script>
+}
+                </code></pre>
+        </div>
+        
+        <h3>Comparison with Teacher’s Solution</h3>
+        <p>
+                Comparing my implementation to the <strong>teacher’s solution</strong>, I found key differences:
+        </p>
+        <ul>
+                <li>The teacher’s solution <strong>optimized tree expansion</strong>, pruning redundant paths earlier.</li>
+                <li>Their approach to <strong>memory management was stricter</strong>, reducing potential leaks.</li>
+                <li>They <strong>separated logic into more helper functions</strong>, improving readability.</li>
+        </ul>
+
+        <h3>Reflection</h3>
+        <p>
+                Debugging this project was a challenge due to <strong>segmentation faults and memory leaks</strong>. Here’s what I learned:
+        </p>
+        <ul>
+                <li><strong>Valgrind</strong> is essential for detecting <strong>memory leaks</strong> in dynamic allocations.</li>
+                <li>Breaking down <strong>recursion into smaller steps</strong> made debugging easier.</li>
+                <li>Using <strong>print statements in tree traversal</strong> helped verify correctness.</li>
+        </ul>
+
+        <p>
+                Overall, this assignment reinforced my understanding of <strong>tree traversal</strong>, <strong>recursive functions</strong>, and <strong>memory management in C</strong>.
+        </p>
+
+        <div class="btn-container">
+                <a href="Assignments/KIT107_Assignment_3.zip" class="btn download-btn">Download ZIP</a>
+                <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+        </div>
+                        `
+                }
+        };
+    </script>
 </body>
 </html>
