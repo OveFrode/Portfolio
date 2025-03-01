@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C/C++ Projects</title> <!-- Change title based on the page -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Assuming you have a shared CSS file -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C/C++/C# Projects - Zac's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
+        <div class="logo">Z</div>
         <nav>
             <ul>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="index.html">Projects</a></li>
                 <li><a href="#snippets">Snippets</a></li>
                 <li><a href="#reflections">Reflections</a></li>
-                <li><a href="index.html">Back to Portfolio</a></li> <!-- Back to portfolio home page -->
+                <li><a href="index.html">Back to Portfolio</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <!-- Section for Projects -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <h3>Project Title 1</h3>
-                    <p>Short description of this project. You can include what the project was about, key features, etc.</p>
-                </div>
-                <div class="project-item">
-                    <h3>Project Title 2</h3>
-                    <p>Short description of this project. Add details about the technologies used and what you learned.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
+  <div class="container">
+    <!-- Project Cards (Blog List) -->
+    <section id="project-cards">
+      <h2>C/C++/C# Projects</h2>
+      <div class="card-list">
+        <!-- Assignment 2 Card -->
+        <div class="project-card" data-assignment="assignment2">
+          <h3>Assignment 2 – Game Scoring System</h3>
+          <p>Implemented a scoring system with linked lists and modular functions.</p>
+          <a href="#" class="btn" onclick="showAssignment('assignment2'); return false;">See More</a>
+        </div>
+      </div>
+    </section>
 
-        <!-- Section for Snippets -->
-        <section id="snippets">
-            <h2>Code Snippets</h2>
-            <pre><code>
-// Example Code Snippet 1
-public class Example {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+    <!-- Detailed Assignment Blog Post (Hidden by default) -->
+    <section id="project-details">
+      <!-- Content will be injected by JavaScript -->
+    </section>
+  </div>
+
+  <footer class="container">
+    <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="js/scripts.js"></script>
+  <!-- Global Assignment Data for Detailed Views -->
+  <script>
+    window.assignments = {
+        assignment2: {
+            title: "Assignment 2 – Game Scoring System",
+            content: `
+                <h2>Assignment 2 – Game Scoring System</h2>
+    <p>
+        This assignment focused on implementing a game scoring system using linked lists and modular programming techniques in C.
+    </p>
+
+    <h3>Key Features</h3>
+    <ul>
+        <li>Dynamic linked list-based data storage</li>
+        <li>Encapsulation through getter/setter functions</li>
+        <li>Memory allocation using &grave;malloc&grave;</li>
+    </ul>
+
+    <!-- Code Snippet -->
+    <h3 class="collapsible" onclick="toggleCode('quartersC')">quarters.c ⮟</h3>
+    <div id="quartersC" class="code-container" style="display: none;">
+        <pre><code>
+void add_score_to_quarter(quarters q, score a_score) {
+    node new_s;
+    node current;
+    
+    init_node(&new_s, a_score);
+    
+    if (get_scores(q) == NULL) {
+        set_scores(q, new_s);
+    } else {
+        current = get_scores(q);
+        while (get_next(current) != NULL) {
+            current = get_next(current);
+        }
+        set_next(current, new_s);
     }
 }
-            </code></pre>
-            <p>Brief explanation of this snippet, what it does, and why it's important to highlight.</p>
+        </code></pre>
+    </div>
 
-            <pre><code>
-// Example Code Snippet 2
-function myFunction() {
-    alert('This is a sample function.');
-}
-            </code></pre>
-            <p>Explanation of the second code snippet.</p>
-        </section>
+    <h3>Reflection</h3>
+    <p>
+        This project was a great introduction to C programming. One key takeaway was the importance of **encapsulation**.
+        Initially, I accessed &grave;q->scores&grave; directly, but the teacher's solution used &grave;get_scores(q)&grave;,
+        which is better for modularity.
+    </p>
 
-        <!-- Section for Reflections -->
-        <section id="reflections">
-            <h2>Reflections</h2>
-            <p>In this section, provide a reflection about your learning process, challenges you overcame, and how these projects helped you grow as a developer. Discuss the skills you learned or improved upon while working on these projects.</p>
-        </section>
-    </main>
-
-    <!-- Footer with Back to Portfolio Button -->
-    <footer>
-        <a href="index.html" class="btn">Back to Portfolio</a> <!-- Links back to portfolio home -->
-    </footer>
-
-    <script src="js/scripts.js"></script> <!-- Link to any JavaScript if needed -->
+    <div class="btn-container">
+        <a href="Assignments/KIT107_Assignment_2.zip" class="btn download-btn">Download ZIP</a>
+        <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+    </div>
+            `
+        }
+    };
+  </script>
 </body>
 </html>
