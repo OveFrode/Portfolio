@@ -53,17 +53,19 @@
             content: `
                 <h2>Assignment 2 – Game Scoring System</h2>
     <p>
-        This assignment focused on implementing a game scoring system using linked lists and modular programming techniques in C.
+        This assignment required implementing a modular **game scoring system** using **C**. It focused on **linked lists**, **memory management**, and **encapsulation**. The provided codebase contained some functions, but we needed to implement missing parts and ensure proper integration.
     </p>
-
-    <h3>Key Features</h3>
+    
+    <h3>Project Overview</h3>
     <ul>
-        <li>Dynamic linked list-based data storage</li>
-        <li>Encapsulation through getter/setter functions</li>
-        <li>Memory allocation using &grave;malloc&grave;</li>
+        <li>Built a **dynamic linked list** structure for handling scores.</li>
+        <li>Used **getter and setter functions** to maintain encapsulation.</li>
+        <li>Managed **memory allocation** carefully to avoid leaks.</li>
+        <li>Implemented missing logic while ensuring compatibility with the existing code.</li>
     </ul>
 
-    <!-- Code Snippet -->
+    <h3>Key Code Implementations</h3>
+    
     <h3 class="collapsible" onclick="toggleCode('quartersC')">quarters.c ⮟</h3>
     <div id="quartersC" class="code-container" style="display: none;">
         <pre><code>
@@ -86,11 +88,66 @@ void add_score_to_quarter(quarters q, score a_score) {
         </code></pre>
     </div>
 
+    <h3 class="collapsible" onclick="toggleCode('headersH')">headers.h ⮟</h3>
+    <div id="headersH" class="code-container" style="display: none;">
+        <pre><code>
+#ifndef HEADERS_H
+#define HEADERS_H
+
+typedef struct node *node;
+typedef struct score score;
+typedef struct quarters *quarters;
+
+// Function prototypes
+void init_node(node *n, score s);
+node get_next(node n);
+void set_next(node n, node next);
+void set_scores(quarters q, node n);
+node get_scores(quarters q);
+        </code></pre>
+    </div>
+    
+    <h3 class="collapsible" onclick="toggleCode('memoryM')">Memory Management Considerations ⮟</h3>
+    <div id="memoryM" class="code-container" style="display: none;">
+        <pre><code>
+// Example of memory deallocation to avoid leaks
+void free_quarters(quarters q) {
+    node current = get_scores(q);
+    node temp;
+    
+    while (current != NULL) {
+        temp = get_next(current);
+        free(current);
+        current = temp;
+    }
+}
+        </code></pre>
+    </div>
+
+    <h3>Comparison with Teacher’s Solution</h3>
+    <p>
+        While my implementation worked, I noticed some key differences in the **teacher’s solution**:
+    </p>
+    <ul>
+        <li>The teacher **used function pointers** in some parts, making the code more flexible.</li>
+        <li>Encapsulation was handled **more strictly**, preventing direct access to struct members.</li>
+        <li>Their solution **handled edge cases better**, like **empty lists** or **duplicate entries**.</li>
+    </ul>
+    <p>
+        One notable change was in **how nodes were initialized**. In my version, I initialized nodes inline, but in the teacher’s version, a separate **init function** handled everything. This made the code **more modular and reusable**.
+    </p>
+
     <h3>Reflection</h3>
     <p>
-        This project was a great introduction to C programming. One key takeaway was the importance of **encapsulation**.
-        Initially, I accessed &grave;q->scores&grave; directly, but the teacher's solution used &grave;get_scores(q)&grave;,
-        which is better for modularity.
+        **Debugging in C** was one of the biggest challenges. Unlike higher-level languages, C doesn’t offer built-in debugging tools, so I relied on:
+    </p>
+    <ul>
+        <li>**Print debugging** – Checking struct contents at various points.</li>
+        <li>**Valgrind** – Used for detecting memory leaks.</li>
+        <li>**Stepping through execution** – Analyzing function calls manually.</li>
+    </ul>
+    <p>
+        This assignment reinforced the importance of **modular code**, **proper memory management**, and **following structured debugging practices**. It also helped me appreciate why **C debugging** is notoriously difficult!
     </p>
 
     <div class="btn-container">
