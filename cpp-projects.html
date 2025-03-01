@@ -155,6 +155,118 @@ void free_quarters(quarters q) {
         <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
     </div>
             `
+        },
+        assignment3: {
+            title: "Assignment 3 – Maze Solver",
+            content: `
+                <h2>Assignment 3 – Maze Solver</h2>
+    <p>
+        This assignment required implementing a <strong>maze-solving algorithm</strong> using <strong>C</strong>. It focused on <strong>game trees</strong>, <strong>linked lists</strong>, <strong>stacks</strong>, and <strong>queues</strong> to find an optimal path from <strong>start to stop</strong> in a given maze representation.
+    </p>
+    
+    <h3>Project Overview</h3>
+    <ul>
+        <li>Built a **game tree** to explore all possible moves in the maze.</li>
+        <li>Used **stacks and queues** to implement **depth-first** and **breadth-first search**.</li>
+        <li>Created **linked list nodes** to store game states efficiently.</li>
+        <li>Ensured memory safety and proper handling of **dynamic allocations**.</li>
+    </ul>
+
+    <h3>Key Code Implementations</h3>
+    
+    <h3 class="collapsible" onclick="toggleCode('gameTreeC')">game_tree.c ⮟</h3>
+    <div id="gameTreeC" class="code-container" style="display: none;">
+        <pre><code>
+// Recursive function to generate the game tree
+void expand_game_tree(t_node root) {
+    if (root == NULL) return;
+    // Generate child nodes for possible moves
+    if (can_move_forward(root)) root->children[0] = create_node(FORWARD);
+    if (can_turn_left(root)) root->children[1] = create_node(LEFT);
+    if (can_turn_right(root)) root->children[2] = create_node(RIGHT);
+    // Recursively expand child nodes
+    for (int i = 0; i < 3; i++) {
+        if (root->children[i] != NULL) {
+            expand_game_tree(root->children[i]);
+        }
+    }
+}
+        </code></pre>
+    </div>
+
+    <h3 class="collapsible" onclick="toggleCode('stackC')">stack.c ⮟</h3>
+    <div id="stackC" class="code-container" style="display: none;">
+        <pre><code>
+// Stack implementation for depth-first search
+void push(stack s, t_node node) {
+    node->next = s->top;
+    s->top = node;
+}
+
+// Pop function
+void pop(stack s) {
+    if (s->top != NULL) {
+        t_node temp = s->top;
+        s->top = s->top->next;
+        free(temp);
+    }
+}
+        </code></pre>
+    </div>
+
+    <h3 class="collapsible" onclick="toggleCode('queueC')">queue.c ⮟</h3>
+    <div id="queueC" class="code-container" style="display: none;">
+        <pre><code>
+// Queue implementation for breadth-first search
+void enqueue(queue q, t_node node) {
+    if (q->rear == NULL) {
+        q->front = q->rear = node;
+    } else {
+        q->rear->next = node;
+        q->rear = node;
+    }
+}
+
+// Dequeue function
+void dequeue(queue q) {
+    if (q->front != NULL) {
+        t_node temp = q->front;
+        q->front = q->front->next;
+        free(temp);
+    }
+}
+        </code></pre>
+    </div>
+    
+    <h3>Comparison with Teacher’s Solution</h3>
+    <p>
+        Comparing my implementation to the **teacher’s solution**, I found key differences:
+    </p>
+    <ul>
+        <li>The teacher’s solution **optimized tree expansion**, pruning redundant paths earlier.</li>
+        <li>Their approach to **memory management was stricter**, reducing potential leaks.</li>
+        <li>They **separated logic into more helper functions**, improving readability.</li>
+    </ul>
+
+    <h3>Reflection</h3>
+    <p>
+        Debugging this project was a challenge due to **segmentation faults and memory leaks**. Here’s what I learned:
+    </p>
+    <ul>
+        <li>**Valgrind** is essential for detecting **memory leaks** in dynamic allocations.</li>
+        <li>Breaking down **recursion into smaller steps** made debugging easier.</li>
+        <li>Using **print statements in tree traversal** helped verify correctness.</li>
+    </ul>
+
+    <p>
+        Overall, this assignment reinforced my understanding of **tree traversal**, **recursive functions**, and **memory management in C**.
+    </p>
+
+    <div class="btn-container">
+        <a href="Assignments/KIT107_Assignment_3.zip" class="btn download-btn">Download ZIP</a>
+        <a href="#" class="btn back-btn" onclick="hideAssignment(); return false;">Back to Projects</a>
+    </div>
+            `
         }
     };
   </script>
