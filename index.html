@@ -43,13 +43,15 @@
         </div>
         <div class="about-text">
             <h2>About Me</h2>
-            <p>Hello! I'm Zachary Partridge, a passionate Game Developer & Web Designer. I am currently in my last semester of a Bachelor of ICT, majoring in Games and Creative Technology at the University of Tasmania. I love to create immersive and engaging digital experiences, blending creativity with technical skills. I am particularly interested in game development, web design, and motion graphics.</p>
-            <p>[Placeholder text.]</p>
+            <p>Hello! I'm Zachary Partridge, a Game Developer & Web Designer.</p>
+            <p>I recently graduated with a <strong>Bachelor of ICT (Games and Creative Technology)</strong> from the University of Tasmania. I love creating immersive and engaging digital experiences, blending creativity with technical skills. My key interests lie in <strong>game development, web design, and motion graphics</strong>.</p>
+            <p>This portfolio is currently a <strong>work in progress</strong>, with more projects and details being added over time. If you're looking for specific examples of my work in <strong>games, web development, or a particular language</strong>, feel free to <strong><a href="#contact">reach out</a></strong>—I'm happy to share more!</p>
             <div class="about-buttons">
                 <a href="#" class="btn">Get Resume</a>
                 <a href="#skills" class="btn">My Skills</a>
             </div>
         </div>
+        
     </section>
      
 <!-- Skills Section -->
@@ -339,29 +341,38 @@
 
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-container">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-    
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+<section id="contact">
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <p id="status-message"></p>
+    </div>
+</section>
+
     
     <footer>
         <p>&copy; 2024 Zachary Partridge. All rights reserved.</p>
     </footer>
 
-    <!-- Link to external JavaScript -->
-    <script src="js/scripts.js"></script>
+        <!-- Include External JavaScript -->
+        <script src="js/scripts.js"></script>
+
+        <!-- Include EmailJS Library -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+        <!-- Contact Form Logic -->
+        <script src="js/contact.js"></script>
+    
 </body>
 </html>
